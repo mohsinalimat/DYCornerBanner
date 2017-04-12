@@ -38,6 +38,16 @@
                ReferencedContainer = "container:../DYCornerBanner.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "B4147BEC1E9E714E003432F2"
+               BuildableName = "DYCornerBannerDemoTests.xctest"
+               BlueprintName = "DYCornerBannerDemoTests"
+               ReferencedContainer = "container:DYCornerBannerDemo.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference

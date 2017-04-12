@@ -29,7 +29,7 @@ s.framework = "UIKit"
 
 
 # 8
-s.source_files = "DYCornerBanner**/*.{swift, h, plist}"
+s.source_files = "DYCornerBanner/*.{swift, h, plist}"
 
 
 end
