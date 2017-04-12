@@ -42,7 +42,7 @@ public class DYCornerBanner: UIView {
     required public init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)!
         print("init decoder")
-            self.checkSquareShape()
+            //self.checkSquareShape()
         
   
     }
@@ -51,33 +51,17 @@ public class DYCornerBanner: UIView {
   public  override init(frame: CGRect){
         super.init(frame: frame)
     print("init in code with frame")
-           self.checkSquareShape()
+         //  self.checkSquareShape()
 
     }
     
-
-
-
-//    
-//    public convenience init(frame:CGRect,  text: String, textColor: UIColor, bannerColor: UIColor, position: BannerPosition) {
-//      
-//        self.init(frame: frame)
-//          self.setup(text: text, textColor: textColor, bannerColor: bannerColor, position: position)
-//        
-//    }
-    
-    
-    
-    private func checkSquareShape() {
-        
-        print("corner banner width \(self.frame.width) , height \(self.frame.height)")
-        assert(self.frame.width == self.frame.height, "The corner banner will only be displayed correctly if the view is a square!")
-        
-    }
-    
-    
-
-    
+    /// setup - Has to be called on corner banner instance after creating the instance either in code or in the storyboard
+    ///
+    /// - Parameters:
+    ///   - text: Banner label text.
+    ///   - textColor: text color.
+    ///   - bannerColor: fill colour of the banner label.
+    ///   - position: .bottomRight, .topRight, .topLeft or .bottomLeft
     public func setup(text: String, textColor: UIColor, bannerColor: UIColor, position:BannerPosition ) {
         print("setup called")
      
@@ -85,11 +69,9 @@ public class DYCornerBanner: UIView {
         self.backgroundColor = UIColor.clear
         self.isUserInteractionEnabled = false
         self.clipsToBounds = true
-        
-//        
+
           self.bannerPosition = position
 
-        
         // dummy label for size calculation
         let sizeAdjustmentLabel = UILabel(frame: CGRect(x: 0, y: 0, width: self.frame.width, height: self.frame.height / 4.0))
         sizeAdjustmentLabel.text = text
@@ -97,7 +79,10 @@ public class DYCornerBanner: UIView {
         sizeAdjustmentLabel.sizeToFit()
 //
         // banner size
-        let labelWidth =  sqrt( 2.0 * self.frame.width * self.frame.height)
+    //    let labelWidth =  sqrt( pow(self.frame.width, 2) self.frame.width * self.frame.width  + self.frame.height * self.frame.height)
+        let labelWidth =  sqrt( pow(self.frame.width, 2) +  pow(self.frame.height, 2))
+        
+        
         print("label width \(labelWidth)" )
         let labelHeight = sizeAdjustmentLabel.frame.size.height
             print("label height \(labelHeight)" )
@@ -150,19 +135,21 @@ public class DYCornerBanner: UIView {
              super.layoutSubviews()
         print("layout subviews called")
 
-
-        let rotationAngle = { () -> Double in
+        let sinRotationAngle = self.frame.size.height / self.bannerLabel.frame.size.width
+        let arcRotation = asin(sinRotationAngle)
+        print("arc rotation \(arcRotation)")
+        //
+        let rotationAngleFactor = { () -> CGFloat in
             switch self.bannerPosition {
             case .bottomRight, .topLeft:
-                return -M_PI_4
+                return -1.0
             case .bottomLeft, .topRight:
-                return M_PI_4
+                return 1.0
             }
         }()
-        print("rotation angle: \(rotationAngle)")
+
+        let rotation = CGAffineTransform.init(rotationAngle: CGFloat(rotationAngleFactor * arcRotation))
         
-        let rotation = CGAffineTransform.init(rotationAngle: CGFloat(rotationAngle))
-        //
         self.bannerLabel.transform = rotation
         
    
@@ -173,9 +160,19 @@ public class DYCornerBanner: UIView {
 
 }
 
+
+
+/// an enum for setting the corner banner position
+///
+/// - bottomRight:  surprise! bottomRight corner.
+/// - topRight: topRight
+/// - topLeft: yes, you guessed it: top left corner!
+/// - bottomLeft: wow, this one, too!
 public enum BannerPosition {
     case bottomRight, topRight, topLeft, bottomLeft
 }
+
+
 
 fileprivate class Configuration {
     
@@ -186,6 +183,7 @@ fileprivate class Configuration {
        self.setupDefaults()
     }
     
+    /// defaults for bannerWidth and text font. The properties in the corner label instance can be overridden.
     func setupDefaults() {
         
         self.bannerWidth = 12.0

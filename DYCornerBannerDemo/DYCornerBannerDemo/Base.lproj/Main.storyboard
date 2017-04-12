@@ -30,19 +30,19 @@
                                 </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8hX-H3-sRh" customClass="DYCornerBanner" customModule="DYCornerBanner">
-                                <rect key="frame" x="269" y="158" width="90" height="90"/>
+                                <rect key="frame" x="199" y="158" width="160" height="90"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="90" id="62T-hB-2BY"/>
-                                    <constraint firstAttribute="width" constant="90" id="HE5-g0-kWs"/>
+                                    <constraint firstAttribute="width" constant="160" id="HE5-g0-kWs"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZaB-KZ-DhX" customClass="DYCornerBanner" customModule="DYCornerBanner">
-                                <rect key="frame" x="16" y="28" width="100" height="100"/>
+                                <rect key="frame" x="16" y="28" width="150" height="100"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="jeX-sS-URx"/>
-                                    <constraint firstAttribute="width" constant="100" id="q3n-Gp-agT"/>
+                                    <constraint firstAttribute="width" constant="150" id="q3n-Gp-agT"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KSZ-N7-iTC" customClass="DYCornerBanner" customModule="DYCornerBanner">

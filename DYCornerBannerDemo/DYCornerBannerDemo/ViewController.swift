@@ -12,6 +12,7 @@ import DYCornerBanner
 class ViewController: UIViewController {
 
     @IBOutlet weak var imageView: UIImageView!
+    
     @IBOutlet weak var cornerBannerBottomRight: DYCornerBanner!
     
     @IBOutlet weak var cornerBannerTopLeft: DYCornerBanner!
@@ -22,11 +23,13 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-  self.cornerBannerBottomRight.textFont = UIFont(name: "AmericanTypewriter-Bold", size: 11.0)!
+        
+        // with custom Font
+        self.cornerBannerBottomRight.textFont = UIFont(name: "AmericanTypewriter-Bold", size: 11.0)!
         self.cornerBannerBottomRight.setup(text: "Top Cruise Tour!", textColor: UIColor.white, bannerColor: UIColor.red, position: .bottomRight)
         
         
-
+        // with custom font and custom width
         self.cornerBannerTopLeft.textFont = UIFont(name: "ChalkboardSE-Bold" , size: 15.0)!
         self.cornerBannerTopLeft.bannerWidth = 17.0
         self.cornerBannerTopLeft.setup(text: "Just Added!", textColor: UIColor.white, bannerColor: UIColor.grassGreen(), position: .topLeft)
@@ -36,6 +39,7 @@ class ViewController: UIViewController {
         self.cornerBannerBottomLeft.setup(text: "Sunshine Guaranteed!", textColor: UIColor.black, bannerColor: UIColor.yellow, position: .bottomLeft)
         
         
+        // programatically created DY Corner Banner
         let frame = CGRect(x: self.imageView.frame.size.width -  90, y: 0, width: 90, height: 90)
         let bannerInCode = DYCornerBanner(frame: frame)
        bannerInCode.textFont = UIFont(name: "HelveticaNeue-Bold", size: 10.0)!
