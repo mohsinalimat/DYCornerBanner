@@ -10,6 +10,7 @@
 		B42990901E9C8C2A00B91CD6 /* DYCornerBanner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B42990861E9C8C2A00B91CD6 /* DYCornerBanner.framework */; };
 		B42990951E9C8C2A00B91CD6 /* DYCornerBannerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42990941E9C8C2A00B91CD6 /* DYCornerBannerTests.swift */; };
 		B42990971E9C8C2A00B91CD6 /* DYCornerBanner.h in Headers */ = {isa = PBXBuildFile; fileRef = B42990891E9C8C2A00B91CD6 /* DYCornerBanner.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B42990BF1E9C8D4300B91CD6 /* DYCornerBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42990BE1E9C8D4300B91CD6 /* DYCornerBanner.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 		B429908F1E9C8C2A00B91CD6 /* DYCornerBannerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DYCornerBannerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B42990941E9C8C2A00B91CD6 /* DYCornerBannerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DYCornerBannerTests.swift; sourceTree = "<group>"; };
 		B42990961E9C8C2A00B91CD6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B42990BE1E9C8D4300B91CD6 /* DYCornerBanner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DYCornerBanner.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 		B42990881E9C8C2A00B91CD6 /* DYCornerBanner */ = {
 			isa = PBXGroup;
 			children = (
+				B42990BE1E9C8D4300B91CD6 /* DYCornerBanner.swift */,
 				B42990891E9C8C2A00B91CD6 /* DYCornerBanner.h */,
 				B429908A1E9C8C2A00B91CD6 /* Info.plist */,
 			);
@@ -149,6 +152,7 @@
 					B42990851E9C8C2A00B91CD6 = {
 						CreatedOnToolsVersion = 8.2;
 						DevelopmentTeam = 76FXG652LY;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 					B429908E1E9C8C2A00B91CD6 = {
@@ -198,6 +202,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B42990BF1E9C8D4300B91CD6 /* DYCornerBanner.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,6 +327,7 @@
 		B429909B1E9C8C2A00B91CD6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 76FXG652LY;
@@ -334,6 +340,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = me.duoyun.DYCornerBanner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -341,6 +348,7 @@
 		B429909C1E9C8C2A00B91CD6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 76FXG652LY;
@@ -360,6 +368,7 @@
 		B429909E1E9C8C2A00B91CD6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 76FXG652LY;
 				INFOPLIST_FILE = DYCornerBannerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -372,6 +381,7 @@
 		B429909F1E9C8C2A00B91CD6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 76FXG652LY;
 				INFOPLIST_FILE = DYCornerBannerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

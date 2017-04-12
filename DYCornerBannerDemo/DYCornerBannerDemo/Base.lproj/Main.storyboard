@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DYCornerBannerDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IMG_0002" translatesAutoresizingMaskIntoConstraints="NO" id="2Wn-nN-0DX">
+                                <rect key="frame" x="16" y="28" width="343" height="220"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="343" id="Wfb-NQ-87y"/>
+                                    <constraint firstAttribute="height" constant="220" id="p7I-2g-oq7"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8hX-H3-sRh" customClass="DYCornerBanner" customModule="DYCornerBanner">
+                                <rect key="frame" x="269" y="158" width="90" height="90"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="62T-hB-2BY"/>
+                                    <constraint firstAttribute="width" constant="90" id="HE5-g0-kWs"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZaB-KZ-DhX" customClass="DYCornerBanner" customModule="DYCornerBanner">
+                                <rect key="frame" x="16" y="28" width="100" height="100"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="jeX-sS-URx"/>
+                                    <constraint firstAttribute="width" constant="100" id="q3n-Gp-agT"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KSZ-N7-iTC" customClass="DYCornerBanner" customModule="DYCornerBanner">
+                                <rect key="frame" x="16" y="148" width="100" height="100"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="ggK-2g-LqR"/>
+                                    <constraint firstAttribute="height" constant="100" id="hgc-aQ-gwW"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="8hX-H3-sRh" firstAttribute="bottom" secondItem="2Wn-nN-0DX" secondAttribute="bottom" id="2Dh-g9-rdi"/>
+                            <constraint firstItem="KSZ-N7-iTC" firstAttribute="leading" secondItem="2Wn-nN-0DX" secondAttribute="leading" id="3Le-rt-jA4"/>
+                            <constraint firstItem="ZaB-KZ-DhX" firstAttribute="leading" secondItem="2Wn-nN-0DX" secondAttribute="leading" id="R8G-Vn-bNk"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="2Wn-nN-0DX" secondAttribute="leading" id="Scg-aX-tug"/>
+                            <constraint firstItem="8hX-H3-sRh" firstAttribute="trailing" secondItem="2Wn-nN-0DX" secondAttribute="trailing" id="dsN-l7-nYx"/>
+                            <constraint firstItem="KSZ-N7-iTC" firstAttribute="bottom" secondItem="2Wn-nN-0DX" secondAttribute="bottom" id="uvX-RZ-Hp3"/>
+                            <constraint firstItem="2Wn-nN-0DX" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="vDI-qc-YSf"/>
+                            <constraint firstItem="ZaB-KZ-DhX" firstAttribute="top" secondItem="2Wn-nN-0DX" secondAttribute="top" id="w8g-NH-hCa"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cornerBannerBottomLeft" destination="KSZ-N7-iTC" id="vl2-aR-Zgo"/>
+                        <outlet property="cornerBannerBottomRight" destination="8hX-H3-sRh" id="b5p-vK-07S"/>
+                        <outlet property="cornerBannerTopLeft" destination="ZaB-KZ-DhX" id="vbc-SC-8J8"/>
+                        <outlet property="imageView" destination="2Wn-nN-0DX" id="Bhs-4f-iic"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140" y="138.98050974512745"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="IMG_0002" width="2049" height="1537"/>
+    </resources>
+</document>
