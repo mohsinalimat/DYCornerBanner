@@ -361,6 +361,7 @@
 				B42990BD1E9C8CB000B91CD6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
