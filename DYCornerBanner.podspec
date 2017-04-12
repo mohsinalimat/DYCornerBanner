@@ -2,7 +2,7 @@ Pod::Spec.new do |s|
 
 # 1
 s.platform = :ios
-s.ios.deployment_target = '9.0'
+s.ios.deployment_target = '8.0'
 s.name = "DYCornerBanner"
 s.summary = "Customisable corner banner label written in Swift 3"
 s.requires_arc = true
