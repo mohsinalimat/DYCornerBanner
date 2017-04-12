@@ -3,7 +3,7 @@
 
 DYCornerBanner written in **Swift 3** allows you to quickly create corner labels on top of any kind of view, e.g. UIImageView. The rotation angle of the corner label is determined by the width and height of the banner view. 
 
-##Features
+## Features
 
 * set the corner position to bottom right, top right, top left or bottom left.
 * supports banners in any rotation angle and distance from the corner - the rotation angle and the distance from the corner are determined by the size and height-width proportion of the DYCornerBanner view's frame. 
@@ -17,7 +17,7 @@ See the following examples.
 
 ![DYCornerBanner examples](https://github.com/DominikButz/DYCornerBanner/blob/master/gitResources/cornerBannerExamples.png "Corner banner examples")
 
-###Code example: Creating a DYCornerBanner from Interface Builder
+### Code example: Creating a DYCornerBanner from Interface Builder
 
 ```Swift
  @IBOutlet weak var cornerBannerBottomLeft: DYCornerBanner!  // simply drop a UIView into the VC from interface builder in storyboard  and set the UIView class to DYCornerBanner
@@ -32,7 +32,7 @@ See the following examples.
 
 ```
 
-###Code example: Creating a DYCornerBanner in code
+### Code example: Creating a DYCornerBanner in code
 
 Alternatively, you can create a corner banner instance in code like so: 
 ```Swift
@@ -42,8 +42,6 @@ Alternatively, you can create a corner banner instance in code like so:
   self.imageView.addSubview(bannerInCode)
 ```
 
-
-![DYCornerBanner examples](https://github.com/DominikButz/DYCornerBanner/blob/master/gitResources/cornerBannerExamples.png "Corner banner examples")
 
 ### Customising
 You can override the settings for bannerWidth and textFont as shown below. Make sure to set these properties **before calling setup**, otherwise the defaults will be set instead. 
